@@ -1,0 +1,17 @@
+vmstorage:
+  podDisruptionBudget:
+    enabled: true
+
+vmselect:
+  podDisruptionBudget:
+    enabled: true
+
+vminsert:
+  podDisruptionBudget:
+    enabled: true
+
+license:
+#  key: "asdf"
+  secret:
+    name: "victoria-metrics-license"
+    key: "license"
