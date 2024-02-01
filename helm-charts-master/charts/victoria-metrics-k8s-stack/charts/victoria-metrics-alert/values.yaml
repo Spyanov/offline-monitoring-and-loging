@@ -25,7 +25,7 @@ server:
   name: server
   enabled: true
   image:
-    repository: victoriametrics/vmalert
+    repository: https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmalert
     tag: "" # rewrites Chart.AppVersion
     pullPolicy: IfNotPresent
   nameOverride: ""

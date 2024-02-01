@@ -7,7 +7,7 @@ replicaCount: 1
 
 image:
   # -- Victoria Metrics Auth Docker repository and image name
-  repository: victoriametrics/vmauth
+  repository: https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmauth
   # -- Tag of Docker image
   tag: v1.96.0
   # -- Pull policy of Docker image

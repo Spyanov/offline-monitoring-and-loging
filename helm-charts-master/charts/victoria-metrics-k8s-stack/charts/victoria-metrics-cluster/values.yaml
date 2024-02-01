@@ -45,7 +45,7 @@ vmselect:
    # type: RollingUpdate
   image:
     # -- Image repository
-    repository: victoriametrics/vmselect
+    repository: https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmselect
     # -- Image tag
     tag: v1.96.0-cluster
     # -- Image pull policy

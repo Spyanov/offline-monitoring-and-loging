@@ -38,7 +38,7 @@ server:
   name: server
   image:
     # -- Image repository
-    repository: victoriametrics/victoria-metrics
+    repository: https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/victoria-metrics
     # -- Image tag
     tag: v1.96.0
     # -- Image pull policy
@@ -237,7 +237,7 @@ server:
     eula: false
     image:
       # -- vmbackupmanager image repository
-      repository: victoriametrics/vmbackupmanager
+      repository: https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmbackupmanager
       # -- vmbackupmanager image tag
       tag: v1.96.0-enterprise
     # -- disable hourly backups

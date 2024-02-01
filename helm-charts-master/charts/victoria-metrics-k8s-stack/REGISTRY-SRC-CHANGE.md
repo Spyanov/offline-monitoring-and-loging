@@ -32,8 +32,14 @@ image:
   tag: v0.40.0
   # -- Image pull policy
   pullPolicy: IfNotPresent
+  
+cleanupCRD: false
+cleanupImage:
+  repository: gcr.io/google_containers/hyperkube
+  tag: v1.18.0
+  pullPolicy: IfNotPresent
 ```
-to https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/operator
+to https://msk-phub-i-01.mangazeya.local:5002
 ```
 image:
   # -- Image repository
@@ -42,4 +48,40 @@ image:
   tag: v0.40.0
   # -- Image pull policy
   pullPolicy: IfNotPresent
+  
+cleanupCRD: false
+cleanupImage:
+  repository: https://msk-phub-i-01.mangazeya.local:5002/google_containers/hyperkube
+  tag: v1.18.0
+  pullPolicy: IfNotPresent
+```
+
+## victoria-metrics-single
+```
+repository: victoriametrics/victoria-metrics -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/victoria-metrics
+repository: victoriametrics/vmbackupmanager -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmbackupmanager
+```
+
+## victoria-metrics-agent
+```
+repository: victoriametrics/vmagent -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmagent
+```
+
+## victoria-metrics-alert
+```
+repository: victoriametrics/vmalert -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmalert
+```
+
+## victoria-metrics-auth
+```
+repository: victoriametrics/vmauth -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmauth
+```
+
+## victoria-metrics-cluster
+```
+repository: victoriametrics/vmselect -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmselect
+```
+## victoria-metrics-gateway
+```
+repository: victoriametrics/vmgateway -> https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmgateway
 ```

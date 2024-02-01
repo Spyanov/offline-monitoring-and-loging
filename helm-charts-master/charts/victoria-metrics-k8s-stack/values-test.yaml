@@ -22,6 +22,19 @@ victoria-metrics-operator:
   operator:
     # -- By default, operator converts prometheus-operator objects.
     disable_prometheus_converter: true
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname  # Здесь указывается ключ, по которому будет выбрана нода
+            operator: In
+            values:
+            - msk-tphub-mo-01  # Здесь указывается имя ноды, на которой должен быть размещен под
+  tolerations:
+  - key: "node-role.kubernetes.io/monitoring"
+    operator: "Exists"
+    effect: "NoSchedule"
 
 serviceAccount:
   # -- Specifies whether a service account should be created

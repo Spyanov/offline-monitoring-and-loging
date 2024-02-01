@@ -28,7 +28,7 @@ statefulset:
 
 
 image:
-  repository: victoriametrics/vmagent
+  repository: https://msk-phub-i-01.mangazeya.local:5002/victoriametrics/vmagent
   tag: "" # rewrites Chart.AppVersion
   pullPolicy: IfNotPresent
 
