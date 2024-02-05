@@ -120,12 +120,6 @@ externalVM:
 
 # -- Configures vmsingle params
 vmsingle:
-  nodeSelector:
-    node-role.kubernetes.io/monitoring: ""
-  tolerations:
-    - key: "node-role.kubernetes.io/monitoring"
-      operator: "Exists"
-      effect: "NoSchedule"
   annotations: {}
   enabled: true
   # spec for VMSingle crd
@@ -143,6 +137,12 @@ vmsingle:
         requests:
           storage: 15Gi
       storageClassName: "local-storage"
+    nodeSelector:
+      node-role.kubernetes.io/monitoring: ""
+    tolerations:
+      - key: "node-role.kubernetes.io/monitoring"
+        operator: "Exists"
+        effect: "NoSchedule"
   ingress:
     enabled: false
     # For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
