@@ -651,6 +651,12 @@ vmagent:
 grafana:
   enabled: true
   ## all values for grafana helm chart can be specified here
+  nodeSelector:
+    node-role.kubernetes.io/monitoring: ""
+  tolerations:
+    - key: "node-role.kubernetes.io/monitoring"
+      operator: "Exists"
+      effect: "NoSchedule"
   sidecar:
     datasources:
       enabled: true
