@@ -120,6 +120,12 @@ externalVM:
 
 # -- Configures vmsingle params
 vmsingle:
+  nodeSelector:
+    node-role.kubernetes.io/monitoring: ""
+  tolerations:
+    - key: "node-role.kubernetes.io/monitoring"
+      operator: "Exists"
+      effect: "NoSchedule"
   annotations: {}
   enabled: true
   # spec for VMSingle crd
