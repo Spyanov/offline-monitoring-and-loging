@@ -94,7 +94,7 @@ grafana:
     pathType: Prefix
 
     hosts:
-      - portal-mon-test.mangazeya.ru
+      - protal-mon-test.mangazeya.ru
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
     extraPaths: []
     # - path: /*
@@ -112,7 +112,7 @@ grafana:
     tls: []
     #  - secretName: grafana-ingress-tls
     #    hosts:
-    #      - portal-mon-test.mangazeya.ru
+    #      - protal-mon-test.mangazeya.ru
 
   vmServiceScrape:
     # wheter we should create a service scrape resource for grafana
