@@ -351,8 +351,7 @@ vmcluster:
       #      - vminsert.domain.com
 
 alertmanager:
-#  enabled: true TODO (old value True)
-  enabled: false
+  enabled: true
   annotations: {}
   # spec for VMAlertmanager crd
   # https://docs.victoriametrics.com/operator/api.html#vmalertmanagerspec
@@ -362,7 +361,12 @@ alertmanager:
       tag: v0.25.0
     externalURL: ""
     routePrefix: /
-
+    nodeSelector:
+      node-role.kubernetes.io/monitoring: ""
+    tolerations:
+      - key: "node-role.kubernetes.io/monitoring"
+        operator: "Exists"
+        effect: "NoSchedule"
     # if this one defined, it will be used for alertmanager configuration and config parameter will be ignored
     # configSecret: "alertmanager-config"
 
@@ -522,8 +526,7 @@ alertmanager:
 
 vmalert:
   annotations: {}
-#  enabled: true TODO (old value true)
-  enabled: false
+  enabled: true
 
   # Controls whether VMAlert should use VMAgent or VMInsert as a target for remotewrite
   remoteWriteVMAgent: false
@@ -537,6 +540,12 @@ vmalert:
 
     # External labels to add to all generated recording rules and alerts
     externalLabels: {}
+    nodeSelector:
+      node-role.kubernetes.io/monitoring: ""
+    tolerations:
+      - key: "node-role.kubernetes.io/monitoring"
+        operator: "Exists"
+        effect: "NoSchedule"
 
   # extra vmalert annotation templates
   templateFiles:
