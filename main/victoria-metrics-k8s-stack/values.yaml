@@ -660,6 +660,17 @@ vmagent:
 grafana:
   enabled: true
   ## all values for grafana helm chart can be specified here
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+        - name: loki
+          type: loki
+          access: proxy
+          url: "http://loki-gateway.loki.svc"
+          jsonData:
+            maxLines: 1000
+          editable: true
   nodeSelector:
     node-role.kubernetes.io/monitoring: ""
   tolerations:
