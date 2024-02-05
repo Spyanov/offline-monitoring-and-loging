@@ -22,6 +22,12 @@ victoria-metrics-operator:
   operator:
     # -- By default, operator converts prometheus-operator objects.
     disable_prometheus_converter: true
+  nodeSelector:
+    node-role.kubernetes.io/monitoring: ""
+  tolerations:
+    - key: "node-role.kubernetes.io/monitoring"
+      operator: "Exists"
+      effect: "NoSchedule"
 
 serviceAccount:
   # -- Specifies whether a service account should be created
@@ -795,6 +801,13 @@ kube-state-metrics:
   # https://docs.victoriametrics.com/operator/api.html#vmservicescrapespec
   vmServiceScrape:
     spec: {}
+
+  nodeSelector:
+    node-role.kubernetes.io/monitoring: ""
+  tolerations:
+    - key: "node-role.kubernetes.io/monitoring"
+      operator: "Exists"
+      effect: "NoSchedule"
 
   #TODO: selector override for kube-state-metrics deployed separatelly
 
