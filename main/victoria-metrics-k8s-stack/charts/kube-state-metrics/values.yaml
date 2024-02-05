@@ -1,7 +1,7 @@
 # Default values for kube-state-metrics.
 prometheusScrape: true
 image:
-  registry: http://msk-phub-i-01.mangazeya.local:5001
+  registry: msk-phub-i-01.mangazeya.local:5001
   repository: kube-state-metrics/kube-state-metrics
   # If unset use v + .Charts.appVersion
   tag: ""
@@ -91,7 +91,7 @@ rbac:
 kubeRBACProxy:
   enabled: false
   image:
-    registry: http://msk-phub-i-01.mangazeya.local:5007
+    registry: msk-phub-i-01.mangazeya.local:5007
     repository: brancz/kube-rbac-proxy
     tag: v0.14.0
     sha: ""

@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 image:
   # -- Image repository
-  repository: http://msk-phub-i-01.mangazeya.local:5002/victoriametrics/operator
+  repository: msk-phub-i-01.mangazeya.local:5002/victoriametrics/operator
   # -- Image tag
   tag: v0.39.1
   # -- Image pull policy
@@ -16,7 +16,7 @@ createCRD: true
 # -- Tells helm to clean up vm cr resources when uninstalling
 cleanupCRD: false
 cleanupImage:
-  repository: http://msk-phub-i-01.mangazeya.local:5006/google_containers/hyperkube
+  repository: msk-phub-i-01.mangazeya.local:5006/google_containers/hyperkube
   tag: v1.18.0
   pullPolicy: IfNotPresent
 

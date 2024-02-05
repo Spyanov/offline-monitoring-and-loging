@@ -85,7 +85,7 @@ livenessProbe:
 # schedulerName: "default-scheduler"
 
 image:
-  repository: http://msk-phub-i-01.mangazeya.local:5002/grafana/grafana
+  repository: msk-phub-i-01.mangazeya.local:5002/grafana/grafana
   # Overrides the Grafana image tag whose default is the chart appVersion
   tag: ""
   sha: ""
@@ -101,7 +101,7 @@ image:
 
 testFramework:
   enabled: true
-  image: http://msk-phub-i-01.mangazeya.local:5002/bats/bats
+  image: msk-phub-i-01.mangazeya.local:5002/bats/bats
   tag: "v1.4.1"
   imagePullPolicy: IfNotPresent
   securityContext: {}
@@ -145,7 +145,7 @@ extraLabels: {}
 # priorityClassName:
 
 downloadDashboardsImage:
-  repository: http://msk-phub-i-01.mangazeya.local:5002/curlimages/curl
+  repository: msk-phub-i-01.mangazeya.local:5002/curlimages/curl
   tag: 7.85.0
   sha: ""
   pullPolicy: IfNotPresent
@@ -360,7 +360,7 @@ initChownData:
   ## initChownData container image
   ##
   image:
-    repository: http://msk-phub-i-01.mangazeya.local:5002/library/busybox
+    repository: msk-phub-i-01.mangazeya.local:5002/library/busybox
     tag: "1.31.1"
     sha: ""
     pullPolicy: IfNotPresent
@@ -793,7 +793,7 @@ smtp:
 ## Requires at least Grafana 5 to work and can't be used together with parameters dashboardProviders, datasources and dashboards
 sidecar:
   image:
-    repository: http://msk-phub-i-01.mangazeya.local:5007/kiwigrid/k8s-sidecar
+    repository: msk-phub-i-01.mangazeya.local:5007/kiwigrid/k8s-sidecar
     tag: 1.25.1
     sha: ""
   imagePullPolicy: IfNotPresent
@@ -1065,7 +1065,7 @@ imageRenderer:
     behavior: {}
   image:
     # image-renderer Image repository
-    repository: http://msk-phub-i-01.mangazeya.local:5002/grafana/grafana-image-renderer
+    repository: msk-phub-i-01.mangazeya.local:5002/grafana/grafana-image-renderer
     # image-renderer Image tag
     tag: latest
     # image-renderer Image sha (optional)

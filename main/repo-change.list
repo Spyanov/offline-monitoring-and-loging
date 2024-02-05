@@ -1,7 +1,7 @@
-docker.io -> http://msk-phub-i-01.mangazeya.local:5002
-gcr.io -> http://msk-phub-i-01.mangazeya.local:5006
-quay.io -> http://msk-phub-i-01.mangazeya.local:5007
-registry.k8s.io -> http://msk-phub-i-01.mangazeya.local:5001
+docker.io -> msk-phub-i-01.mangazeya.local:5002
+gcr.io -> msk-phub-i-01.mangazeya.local:5006
+quay.io -> msk-phub-i-01.mangazeya.local:5007
+registry.k8s.io -> msk-phub-i-01.mangazeya.local:5001
 
 
 
