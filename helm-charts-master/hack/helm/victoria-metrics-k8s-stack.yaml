@@ -1,3 +1,0 @@
-vmsingle:
-  ingress:
-    enabled: true
